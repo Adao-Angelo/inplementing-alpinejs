@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="../main.js"></script>
+    <title>Text Alpine js</title>
+    <style>
+      @font-face {
+        font-family: "poppins";
+        src: url("../../../Quiz/public/font/Poppins-Medium.ttf");
+      }
+      * {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      x-data="{ name:'',
+        send(){
+            console.log(this.name)
+        }
+    }"
+    >
+      <form action="#" @submit="send">
+        <input type="text" placeholder="you names" x-model="name" />
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </body>
+</html>
